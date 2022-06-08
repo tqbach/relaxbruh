@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | RelaxBro</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/relax-bro.jpg">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/account.css">
+</head>
+<body>
+    <div class="header">
+        <a href="playlist.html" class="header-logo">
+            RelaxBro
+        </a>
+    </div>
+    <div class="back-to-music">
+        <a href="playlist.html">
+            Get back to your muzik
+            <ion-icon name="return-down-back-outline"></ion-icon>
+        </a>
+    </div>
+    <div class="container">
+        <div class="navcol">
+            <div class="nav-item is-showing nav-profile">Profile</div>
+            <div class="nav-item nav-timer">Timer</div>
+            <div class="nav-item">Preferences</div>
+            <div class="nav-item">Billing</div>
+        </div>
+        <div class="account-info">
+            <div class="form-name">INFORMATION</div>
+            <div>
+                <form onsubmit="updateProfile()" action="" class="form-control-profile">
+                    <div class="form-left-col">
+                        <div class="input-label">Username</div>
+                        <div class="input-label">Email</div>
+                        <div class="input-label">First Name</div>
+                        <div class="input-label">Last Name</div>
+                        <button type="submit" class="submit-info-btn">Update</button>
+                        <div class="messProfile"></div>
+                    </div>
+                    <div class="form-right-col">
+                        <input type="text" class="input-value" id="username" disabled>
+                        <input type="text" class="input-value" id="email" disabled>
+                        <input type="text" id="fname" class="input-value">
+                        <input type="text" id="lname" class="input-value">
+                    </div>
+                </form>
+            </div>
+            <div class="line"></div>
+            <div class="form-name">PASSWORD</div>
+            <div>
+                <form action="" onsubmit="updatePassword()" class="form-control-profile">
+                    <div class="form-left-col">
+                        <div class="input-label">Current Password</div>
+                        <div class="input-label">New Password</div>
+                        <div class="input-label">Repeat Password</div>
+                        <button type="submit" class="submit-info-btn">Update</button>
+                        <div class="messPassword"></div>
+                    </div>
+                    <div class="form-right-col">
+                        <input type="password" id="currentPwd" class="input-value">
+                        <input type="password" id="newPwd" class="input-value">
+                        <input type="password" id="repeatPwd" class="input-value">
+                    </div>
+                </form>
+            </div>
+            <div class="line"></div>
+            <form action="" onsubmit="logout()">
+                <button type="submit" class="submit-info-btn">Logout</button>
+            </form>
+        </div>
+        <div class="account-timer is-hidden">
+            <div class="form-name">SET TIMER</div>
+            <div>
+                <form onsubmit="updateTimer()" action="" class="form-control-profile">
+                    <div class="form-left-col">
+                        <div class="input-label">Timer (Minute)</div>
+                        <div class="input-label">Timer (Second)</div>
+                        <button type="submit" class="submit-info-btn">Update</button>
+                        <div class="messTimer"></div>
+                    </div>
+                    <div class="form-right-col">
+                        <input type="number" min="0" max="60" id="timer_min" class="input-value">
+                        <input type="number" min="0" max="60" id="timer_sec" class="input-value">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-info">
+            <div class="footer-logo">RelaxBro</div>
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-col-name">COMPANY</div>
+                    <a href="#" class="footer-col-option">About Us</a>
+                    <a href="#" class="footer-col-option">Jobs</a>
+                    <a href="#" class="footer-col-option">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-name">PRODUCT</div>
+                    <a href="#" class="footer-col-option">Features</a>
+                    <a href="#" class="footer-col-option">Pricing</a>
+                    <a href="#" class="footer-col-option">Apps</a>
+                    <a href="#" class="footer-col-option">Support</a>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-name">MORE</div>
+                    <a href="#" class="footer-col-option">Education</a>
+                    <a href="#" class="footer-col-option">Work</a>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-name">RESOURCES</div>
+                    <a href="#" class="footer-col-option">Blog</a>
+                    <a href="#" class="footer-col-option">How it Works</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            This is a study project. Concept is based on <a href="http://noisli.com">© 2013-2022 Noisli.com</a>
+        </div>
+    </div>
+
+    <script src="../js/all.js"></script>
+    <script src="../js/account.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
